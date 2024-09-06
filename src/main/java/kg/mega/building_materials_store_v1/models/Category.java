@@ -5,6 +5,8 @@ import lombok.Getter;
 import lombok.RequiredArgsConstructor;
 import lombok.Setter;
 
+import java.util.List;
+
 @Entity
 @Getter
 @Setter
@@ -16,4 +18,6 @@ public class Category {
     private Long id;
     private String name;
     private Boolean isActive;
+    @OneToMany
+    private List<Product> products;
 }
