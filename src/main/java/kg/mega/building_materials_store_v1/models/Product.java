@@ -20,7 +20,7 @@ public class Product {
     @JoinColumn(name = "category_id")
     private Category category;
     @ManyToOne                              //(cascade = CascadeType.PERSIST)
-    private Store store ;
+    private Store store;
     private String name;
     private Double price;
     private Integer quantity;

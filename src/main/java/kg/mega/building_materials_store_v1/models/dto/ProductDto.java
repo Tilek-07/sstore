@@ -1,15 +1,11 @@
 package kg.mega.building_materials_store_v1.models.dto;
 
-import jakarta.persistence.ManyToOne;
-import kg.mega.building_materials_store_v1.models.Category;
-import kg.mega.building_materials_store_v1.models.Product;
-import kg.mega.building_materials_store_v1.models.Store;
 import lombok.Data;
 
 @Data
 public class ProductDto {
-    private String categoryName;
-    private Long storeId;
+    private CategoryDto category;
+    private StoreDto store;
     private String name;
     private Double price;
     private Integer quantity;

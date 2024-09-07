@@ -9,6 +9,7 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Optional;
 
 @Service
 @RequiredArgsConstructor
@@ -33,5 +34,10 @@ public class CategoryServiceImpl implements CategoryService {
     @Override
     public void delete(Long id) {
         categoryRepo.deleteById(id);
+    }
+
+    @Override
+    public Optional<Category> findByName(String name) {
+        return categoryRepo.findByName(name);
     }
 }

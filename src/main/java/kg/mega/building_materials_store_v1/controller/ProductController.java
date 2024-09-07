@@ -1,5 +1,6 @@
 package kg.mega.building_materials_store_v1.controller;
 
+import kg.mega.building_materials_store_v1.exception.CategoryNotFoundException;
 import kg.mega.building_materials_store_v1.models.Product;
 import kg.mega.building_materials_store_v1.models.dto.ProductDto;
 import kg.mega.building_materials_store_v1.service.FileStorageService;
@@ -20,7 +21,7 @@ public class ProductController {
     private final FileStorageService fileStorageService;
 
     @PostMapping("/save")
-    public void saveProduct(@RequestBody ProductDto productDto){
+    public void saveProduct(@RequestBody ProductDto productDto) throws CategoryNotFoundException {
         productService.saveProduct(productDto);
     }
 
